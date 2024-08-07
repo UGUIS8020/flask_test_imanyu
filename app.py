@@ -40,7 +40,7 @@ def create():
     if request.method == "POST":
         title = request.form.get("title")
         body = request.form.get("body")
-        file = request.form.get('image_file')
+        file = request.files.get('image_file')
         file_name = uuid.uuid4()
         print(file)
         file.save(file_name)
